@@ -14,6 +14,7 @@ URL: http://search.cpan.org/dist/%{realname}/
 Patch0: Inline-0.44-fix-underscore-localization.patch
 BuildRequires: perl-devel perl-Parse-RecDescent
 Requires: perl(Parse::RecDescent)
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The Inline module allows you to put source code from other programming
