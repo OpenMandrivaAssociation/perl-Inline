@@ -1,7 +1,7 @@
 %define name perl-Inline
 %define realname Inline
 %define version 0.44
-%define release %mkrel 10
+%define release %mkrel 11
 
 Summary: Write Perl subroutines in other programming languages
 Name: %{name}
