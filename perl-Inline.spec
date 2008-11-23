@@ -1,20 +1,21 @@
-%define name perl-Inline
-%define realname Inline
-%define version 0.44
-%define release %mkrel 11
+%define module Inline
+%define name perl-%{module}
+%define version 0.45
+%define release %mkrel 1
 
-Summary: Write Perl subroutines in other programming languages
 Name: %{name}
 Version: %{version}
 Release: %{release}
+Summary: Write Perl subroutines in other programming languages
 License: GPL or Artistic
 Group: Development/Perl
-Source: %{realname}-%{version}.tar.bz2
-URL: http://search.cpan.org/dist/%{realname}/
-Patch0: Inline-0.44-fix-underscore-localization.patch
-BuildRequires: perl-devel perl-Parse-RecDescent
+Url:        http://search.cpan.org/dist/%{module}
+Source:     http://www.cpan.org/modules/by-module/Inline/%{module}-%{version}.tar.gz
+Patch0:     Inline-0.44-fix-underscore-localization.patch
+BuildRequires: perl-devel
+BuildRequires: perl(Parse::RecDescent)
 Requires: perl(Parse::RecDescent)
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot: %{_tmppath}/%{name}-%{version}
 
 %description
 The Inline module allows you to put source code from other programming
@@ -36,7 +37,7 @@ will get compiled when the module is installed, so the end user will
 never notice the compilation time.
 
 %prep
-%setup -q -n Inline-%{version}
+%setup -q -n %{module}-%{version}
 %patch0 -p0
 
 %build
