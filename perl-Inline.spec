@@ -1,21 +1,21 @@
-%define module Inline
-%define name perl-%{module}
-%define version 0.45
-%define release %mkrel 1
+%define upstream_name    Inline
+%define upstream_version 0.45
 
-Name: %{name}
-Version: %{version}
-Release: %{release}
-Summary: Write Perl subroutines in other programming languages
-License: GPL or Artistic
-Group: Development/Perl
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Inline/%{module}-%{version}.tar.gz
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Write Perl subroutines in other programming languages
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Inline/%{upstream_name}-%{upstream_version}.tar.gz
 Patch0:     Inline-0.44-fix-underscore-localization.patch
+
 BuildRequires: perl-devel
 BuildRequires: perl(Parse::RecDescent)
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 Requires: perl(Parse::RecDescent)
-BuildRoot: %{_tmppath}/%{name}-%{version}
 
 %description
 The Inline module allows you to put source code from other programming
@@ -37,7 +37,7 @@ will get compiled when the module is installed, so the end user will
 never notice the compilation time.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 %patch0 -p0
 
 %build
@@ -51,13 +51,12 @@ never notice the compilation time.
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
 %defattr(-,root,root)
 %doc README
 %{_mandir}/*/*
 %{perl_vendorlib}/Inline*
 %{perl_vendorlib}/auto/Inline*
-
-%clean
-rm -rf $RPM_BUILD_ROOT
-
