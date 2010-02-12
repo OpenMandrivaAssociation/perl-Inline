@@ -1,5 +1,5 @@
 %define upstream_name    Inline
-%define upstream_version 0.45
+%define upstream_version 0.46
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -10,11 +10,12 @@ License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Inline/%{upstream_name}-%{upstream_version}.tar.gz
-Patch0:     Inline-0.44-fix-underscore-localization.patch
 
-BuildRequires: perl-devel
 BuildRequires: perl(Parse::RecDescent)
+BuildRequires: perl-devel
+
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+
 Requires: perl(Parse::RecDescent)
 
 %description
@@ -38,14 +39,13 @@ never notice the compilation time.
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
-%patch0 -p0
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor < /dev/null
 %make
 
 %check
-%__make test
+%make test
 
 %install
 rm -rf $RPM_BUILD_ROOT
