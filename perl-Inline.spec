@@ -1,9 +1,9 @@
-%define upstream_name    Inline
-%define upstream_version 0.47
+%define upstream_name Inline
+%define upstream_version 0.51
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Release:	1
 
 Summary:	Write Perl subroutines in other programming languages
 License:	GPL+ or Artistic
@@ -13,7 +13,7 @@ Source0:	http://www.cpan.org/modules/by-module/Inline/%{upstream_name}-%{upstrea
 
 BuildRequires:	perl(Parse::RecDescent)
 BuildRequires:	perl-devel
-BuildArch:	noarch
+BuildArch:		noarch
 
 Requires:	perl(Parse::RecDescent)
 
