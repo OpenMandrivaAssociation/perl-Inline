@@ -12,6 +12,7 @@ Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Inline/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(Parse::RecDescent)
+BuildRequires:	perl(Test::Warn)
 BuildRequires:	perl-devel
 BuildArch:		noarch
 
