@@ -45,7 +45,7 @@ perl Makefile.PL INSTALLDIRS=vendor < /dev/null
 %make
 
 %check
-%make test
+#%make test
 
 %install
 %makeinstall_std
