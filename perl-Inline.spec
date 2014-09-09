@@ -52,5 +52,5 @@ perl Makefile.PL INSTALLDIRS=vendor < /dev/null
 %files
 %doc README
 %{perl_vendorlib}/Inline*
-%{perl_vendorlib}/auto/Inline*
+# %{perl_vendorlib}/auto/Inline*
 %{_mandir}/man3/*
