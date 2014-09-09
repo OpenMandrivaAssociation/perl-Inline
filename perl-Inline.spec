@@ -1,12 +1,12 @@
 %define modname	Inline
-%define modver 0.55
+%define modver 0.76
 
 Summary:	Write Perl subroutines in other programming languages
 
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -54,7 +54,3 @@ perl Makefile.PL INSTALLDIRS=vendor < /dev/null
 %{perl_vendorlib}/Inline*
 %{perl_vendorlib}/auto/Inline*
 %{_mandir}/man3/*
-
-
-
-
