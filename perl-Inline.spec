@@ -1,5 +1,5 @@
 %define modname	Inline
-%define modver 0.76
+%define modver 0.77
 
 Summary:	Write Perl subroutines in other programming languages
 
