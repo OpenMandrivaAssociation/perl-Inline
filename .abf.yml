@@ -5,5 +5,6 @@ removed_sources:
   Inline-0.55.tar.gz: e99adf72397026d55353fb3bf6e1825c9d3f7fa2
   Inline-0.76.tar.gz: 2b41d71e4b6300285c4115985ff15f38989d9dfd
   Inline-0.77.tar.gz: 1a0395c39a17c455632572c8f5ae23135544ea4a
-sources:
   Inline-0.78.tar.gz: 8679543177997680314ab2d8464fb68aa2fc8ef9
+sources:
+  Inline-0.80.tar.gz: ed04370aec297f2797c20dc07dad1ff1a968561f
