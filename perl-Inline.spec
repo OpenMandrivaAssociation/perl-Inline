@@ -1,15 +1,13 @@
 %define modname	Inline
-%define modver 0.78
+%define modver 0.80
 
 Summary:	Write Perl subroutines in other programming languages
-
-
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		http://metacpan.org/pod/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/%{modname}/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Parse::RecDescent)
