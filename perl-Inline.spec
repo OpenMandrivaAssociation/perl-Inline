@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/%{modname}
+Url:		https://metacpan.org/pod/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/%{modname}/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Parse::RecDescent)
